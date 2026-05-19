@@ -1,0 +1,31 @@
+# Ambiente
+.env
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+build/
+dist/
+
+# Caches de ferramentas
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.code-review-graph/
+
+# IDEs / SO
+.DS_Store
+.vscode/
+.idea/
+
+# Cache local do pipeline (regenerável)
+cache/
+
+# Documentos pessoais (estudo / metanotas)
+AGENTS.md
+GUIA-DE-ESTUDO.md
+
