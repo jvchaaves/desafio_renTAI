@@ -1,0 +1,306 @@
+openapi: 3.1.0
+
+info:
+  title: Serviço de Validação de Documentos Clínicos por IA
+  version: 1.0.0
+  description: |
+    API do Desafio P04 ReNTAI.
+    Recebe arquivos (PDF ou imagem) e classifica se são documentos clínicos
+    válidos no escopo de teleconsultoria SUS via APS.
+
+    Este serviço é o backend de IA consumido pelo módulo Fullstack (P01).
+
+    Documentação de apoio:
+    - Definição operacional: docs/01-spec/definicao-documento-clinico-valido.md
+    - ADRs: docs/02-decisoes/
+
+servers:
+  - url: http://localhost:8000
+    description: Desenvolvimento local
+
+paths:
+  /v1/validate:
+    post:
+      summary: Classifica um arquivo como documento clínico válido ou inválido
+      operationId: validateDocument
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [file]
+              properties:
+                file:
+                  type: string
+                  format: binary
+                  description: |
+                    Arquivo a ser classificado. Aceita PDF ou imagem
+                    (PNG, JPEG, TIFF). Tamanho máximo: 20MB.
+                specialty:
+                  type: string
+                  description: |
+                    Especialidade clínica da teleconsultoria (opcional).
+                    Quando presente, ativa ajuste de limiar por especialidade
+                    conforme ADR-003.
+                  example: cardiologia
+      responses:
+        '200':
+          description: Documento processado (válido OU inválido — a decisão está no body)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidateResponse'
+        '400':
+          description: Erro de validação de entrada (arquivo ausente, MIME não suportado)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+        '413':
+          description: Arquivo excede limite de tamanho
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+        '500':
+          description: Erro interno do servidor
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+
+  /v1/health:
+    get:
+      summary: Health check
+      operationId: getHealth
+      responses:
+        '200':
+          description: Serviço operacional
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [status, version]
+                properties:
+                  status:
+                    type: string
+                    example: ok
+                  version:
+                    type: string
+                    example: "1.0.0"
+
+  /v1/config:
+    get:
+      summary: Retorna configuração de limiar e parâmetros correntes
+      operationId: getConfig
+      description: |
+        Útil para o front (P01) exibir ao usuário o threshold aplicado
+        quando uma rejeição acontece, ou para revisão técnica.
+      responses:
+        '200':
+          description: Configuração corrente do serviço
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Config'
+
+components:
+  schemas:
+
+    ValidateResponse:
+      type: object
+      required:
+        - valid
+        - score
+        - label
+        - threshold_applied
+        - threshold_reason
+        - justification
+        - processing_path
+        - request_id
+        - latency_ms
+      properties:
+        valid:
+          type: boolean
+          description: Decisão binária — true se o documento é clínico válido
+          example: true
+        score:
+          type: number
+          format: float
+          minimum: 0
+          maximum: 1
+          description: Score de confiança fundido [0, 1]
+          example: 0.83
+        label:
+          type: string
+          enum: [clinical, non_clinical]
+          description: Rótulo categórico equivalente à decisão binária
+          example: clinical
+        threshold_applied:
+          type: number
+          format: float
+          description: Limiar de fato aplicado nesta requisição
+          example: 0.60
+        threshold_reason:
+          type: string
+          description: |
+            Explicação textual de por que esse limiar foi aplicado.
+            Conforme ADR-003. Útil para o front explicar rejeições ao usuário.
+          example: "base 0.70 + ajuste -0.10 (cardiologia)"
+        justification:
+          type: string
+          description: |
+            Justificativa legível da decisão, agregando os sinais textual
+            e visual em uma explicação coerente para o usuário final.
+          example: "Documento identificado como laudo de eletrocardiograma com paciente identificado e emissor (CRM). Layout visual de documento médico (CLIP) reforça a classificação positiva."
+        reason:
+          type: string
+          enum:
+            - non_clinical
+            - file_unreadable
+            - no_content
+            - file_protected
+            - unsupported_format
+          description: |
+            Razão específica quando `valid=false`. Distingue:
+            - `non_clinical`: classificador concluiu que o conteúdo não é clínico
+            - `file_unreadable`: arquivo corrompido ou ilegível
+            - `no_content`: imagem em branco ou sem texto/conteúdo extraível
+            - `file_protected`: PDF com senha
+            - `unsupported_format`: extensão/MIME não suportado
+            Omitido quando `valid=true`.
+          example: non_clinical
+        doc_type_detected:
+          type: string
+          nullable: true
+          description: |
+            Tipo provável detectado (laudo, exame_lab, prescricao, etc.).
+            null quando não foi possível inferir.
+          example: exame_lab
+        processing_path:
+          type: string
+          enum: [pdf_native, ocr, image_direct]
+          description: |
+            Caminho de extração efetivamente utilizado.
+            - pdf_native: texto extraído via pypdf
+            - ocr: texto extraído via PaddleOCR (PDF escaneado ou fallback)
+            - image_direct: arquivo já era imagem, OCR direto
+        sub_signals:
+          type: object
+          description: |
+            Sinais individuais agregados pelo pipeline.
+            Permite ao consumidor revisar a decisão e ao front exibir
+            explicabilidade granular.
+          properties:
+            text:
+              type: object
+              additionalProperties: true
+              description: Sinais da branch textual (score, classificador_nome, etc.)
+            visual:
+              type: object
+              additionalProperties: true
+              description: Sinais da branch visual (score CLIP, prompt vencedor)
+            extraction_quality:
+              type: number
+              format: float
+              minimum: 0
+              maximum: 1
+              description: Heurística de qualidade da extração do texto
+              example: 0.85
+            fusion_weights:
+              type: object
+              description: Pesos efetivamente aplicados na fusão
+              properties:
+                text:
+                  type: number
+                  format: float
+                visual:
+                  type: number
+                  format: float
+        request_id:
+          type: string
+          format: uuid
+          description: ID único da requisição para correlação de logs entre P01 e P04
+          example: "550e8400-e29b-41d4-a716-446655440000"
+        latency_ms:
+          type: integer
+          description: Latência total do processamento em milissegundos
+          example: 1230
+
+    Config:
+      type: object
+      description: Configuração corrente do serviço (snapshot)
+      properties:
+        classification_threshold_base:
+          type: number
+          format: float
+          example: 0.70
+        adaptive_threshold_enabled:
+          type: boolean
+          example: true
+        specialty_adjustments:
+          type: object
+          description: Mapa de ajustes por especialidade (conforme ADR-003)
+          additionalProperties:
+            type: number
+            format: float
+          example:
+            cardiologia: -0.10
+            oncologia: -0.10
+            dermatologia: 0.05
+            psiquiatria: 0.07
+        text_weight:
+          type: number
+          format: float
+          example: 0.6
+        visual_weight:
+          type: number
+          format: float
+          example: 0.4
+        max_file_size_mb:
+          type: integer
+          example: 20
+        allowed_mime_types:
+          type: array
+          items:
+            type: string
+          example:
+            - application/pdf
+            - image/png
+            - image/jpeg
+            - image/tiff
+        active_configuration:
+          type: string
+          enum: [A, B, C]
+          description: |
+            Qual configuração do ADR-002 está ativa em produção.
+            Determinada empiricamente em E-001.
+
+    Problem:
+      type: object
+      description: Erro em formato RFC 7807 (problem+json)
+      required: [type, title, status]
+      properties:
+        type:
+          type: string
+          format: uri
+          description: Identificador do tipo de erro
+          example: "https://desafio-p04.example.com/errors/file-too-large"
+        title:
+          type: string
+          description: Resumo curto do erro
+          example: "Arquivo excede limite"
+        status:
+          type: integer
+          description: Código HTTP correspondente
+          example: 413
+        detail:
+          type: string
+          description: Detalhe específico desta ocorrência
+          example: "Arquivo de 30MB excede limite de 20MB"
+        instance:
+          type: string
+          format: uri
+          description: URI ou correlation ID desta ocorrência específica
+          example: "/v1/validate#req-550e8400"
