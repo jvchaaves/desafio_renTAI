@@ -1,0 +1,1487 @@
+{
+  "n_docs": 41,
+  "configs": {
+    "A": {
+      "uniform": {
+        "global": {
+          "n": 41,
+          "accuracy": 0.7317,
+          "precision_pos": 0.6765,
+          "recall_pos": 1.0,
+          "f1_pos": 0.807,
+          "f1_macro": 0.6835,
+          "confusion": {
+            "tp": 23,
+            "tn": 7,
+            "fp": 11,
+            "fn": 0
+          }
+        },
+        "by_label": {
+          "clinical": {
+            "n": 19,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 19,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "ambiguous": {
+            "n": 12,
+            "accuracy": 0.4167,
+            "precision_pos": 0.3636,
+            "recall_pos": 1.0,
+            "f1_pos": 0.5333,
+            "f1_macro": 0.3778,
+            "confusion": {
+              "tp": 4,
+              "tn": 1,
+              "fp": 7,
+              "fn": 0
+            }
+          },
+          "non-clinical": {
+            "n": 10,
+            "accuracy": 0.6,
+            "precision_pos": 0.0,
+            "recall_pos": 0.0,
+            "f1_pos": 0.0,
+            "f1_macro": 0.375,
+            "confusion": {
+              "tp": 0,
+              "tn": 6,
+              "fp": 4,
+              "fn": 0
+            }
+          }
+        },
+        "by_mode": {
+          "scan": {
+            "n": 3,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 3,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "photo": {
+            "n": 8,
+            "accuracy": 0.625,
+            "precision_pos": 0.25,
+            "recall_pos": 1.0,
+            "f1_pos": 0.4,
+            "f1_macro": 0.5636,
+            "confusion": {
+              "tp": 1,
+              "tn": 4,
+              "fp": 3,
+              "fn": 0
+            }
+          },
+          "digital": {
+            "n": 30,
+            "accuracy": 0.7333,
+            "precision_pos": 0.7037,
+            "recall_pos": 1.0,
+            "f1_pos": 0.8261,
+            "f1_macro": 0.6273,
+            "confusion": {
+              "tp": 19,
+              "tn": 3,
+              "fp": 8,
+              "fn": 0
+            }
+          }
+        },
+        "by_specialty": {
+          "dermatologia": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "cardiologia": {
+            "n": 3,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 3,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "clinica_geral": {
+            "n": 6,
+            "accuracy": 0.8333,
+            "precision_pos": 0.8333,
+            "recall_pos": 1.0,
+            "f1_pos": 0.9091,
+            "f1_macro": 0.4545,
+            "confusion": {
+              "tp": 5,
+              "tn": 0,
+              "fp": 1,
+              "fn": 0
+            }
+          },
+          "endocrinologia": {
+            "n": 3,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 3,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "enfermagem": {
+            "n": 1,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 1,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "neurologia": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "ortopedia": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "medicina_trabalho": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "pediatria": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "radiologia": {
+            "n": 2,
+            "accuracy": 0.5,
+            "precision_pos": 0.5,
+            "recall_pos": 1.0,
+            "f1_pos": 0.6667,
+            "f1_macro": 0.3333,
+            "confusion": {
+              "tp": 1,
+              "tn": 0,
+              "fp": 1,
+              "fn": 0
+            }
+          }
+        }
+      },
+      "adaptive": {
+        "global": {
+          "n": 41,
+          "accuracy": 0.7317,
+          "precision_pos": 0.6765,
+          "recall_pos": 1.0,
+          "f1_pos": 0.807,
+          "f1_macro": 0.6835,
+          "confusion": {
+            "tp": 23,
+            "tn": 7,
+            "fp": 11,
+            "fn": 0
+          }
+        },
+        "by_label": {
+          "clinical": {
+            "n": 19,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 19,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "ambiguous": {
+            "n": 12,
+            "accuracy": 0.4167,
+            "precision_pos": 0.3636,
+            "recall_pos": 1.0,
+            "f1_pos": 0.5333,
+            "f1_macro": 0.3778,
+            "confusion": {
+              "tp": 4,
+              "tn": 1,
+              "fp": 7,
+              "fn": 0
+            }
+          },
+          "non-clinical": {
+            "n": 10,
+            "accuracy": 0.6,
+            "precision_pos": 0.0,
+            "recall_pos": 0.0,
+            "f1_pos": 0.0,
+            "f1_macro": 0.375,
+            "confusion": {
+              "tp": 0,
+              "tn": 6,
+              "fp": 4,
+              "fn": 0
+            }
+          }
+        },
+        "by_mode": {
+          "scan": {
+            "n": 3,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 3,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "photo": {
+            "n": 8,
+            "accuracy": 0.625,
+            "precision_pos": 0.25,
+            "recall_pos": 1.0,
+            "f1_pos": 0.4,
+            "f1_macro": 0.5636,
+            "confusion": {
+              "tp": 1,
+              "tn": 4,
+              "fp": 3,
+              "fn": 0
+            }
+          },
+          "digital": {
+            "n": 30,
+            "accuracy": 0.7333,
+            "precision_pos": 0.7037,
+            "recall_pos": 1.0,
+            "f1_pos": 0.8261,
+            "f1_macro": 0.6273,
+            "confusion": {
+              "tp": 19,
+              "tn": 3,
+              "fp": 8,
+              "fn": 0
+            }
+          }
+        },
+        "by_specialty": {
+          "dermatologia": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "cardiologia": {
+            "n": 3,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 3,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "clinica_geral": {
+            "n": 6,
+            "accuracy": 0.8333,
+            "precision_pos": 0.8333,
+            "recall_pos": 1.0,
+            "f1_pos": 0.9091,
+            "f1_macro": 0.4545,
+            "confusion": {
+              "tp": 5,
+              "tn": 0,
+              "fp": 1,
+              "fn": 0
+            }
+          },
+          "endocrinologia": {
+            "n": 3,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 3,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "enfermagem": {
+            "n": 1,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 1,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "neurologia": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "ortopedia": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "medicina_trabalho": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "pediatria": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "radiologia": {
+            "n": 2,
+            "accuracy": 0.5,
+            "precision_pos": 0.5,
+            "recall_pos": 1.0,
+            "f1_pos": 0.6667,
+            "f1_macro": 0.3333,
+            "confusion": {
+              "tp": 1,
+              "tn": 0,
+              "fp": 1,
+              "fn": 0
+            }
+          }
+        }
+      }
+    },
+    "B": {
+      "uniform": {
+        "global": {
+          "n": 41,
+          "accuracy": 0.561,
+          "precision_pos": 0.6,
+          "recall_pos": 0.6522,
+          "f1_pos": 0.625,
+          "f1_macro": 0.5478,
+          "confusion": {
+            "tp": 15,
+            "tn": 8,
+            "fp": 10,
+            "fn": 8
+          }
+        },
+        "by_label": {
+          "clinical": {
+            "n": 19,
+            "accuracy": 0.6316,
+            "precision_pos": 1.0,
+            "recall_pos": 0.6316,
+            "f1_pos": 0.7742,
+            "f1_macro": 0.3871,
+            "confusion": {
+              "tp": 12,
+              "tn": 0,
+              "fp": 0,
+              "fn": 7
+            }
+          },
+          "ambiguous": {
+            "n": 12,
+            "accuracy": 0.3333,
+            "precision_pos": 0.3,
+            "recall_pos": 0.75,
+            "f1_pos": 0.4286,
+            "f1_macro": 0.3143,
+            "confusion": {
+              "tp": 3,
+              "tn": 1,
+              "fp": 7,
+              "fn": 1
+            }
+          },
+          "non-clinical": {
+            "n": 10,
+            "accuracy": 0.7,
+            "precision_pos": 0.0,
+            "recall_pos": 0.0,
+            "f1_pos": 0.0,
+            "f1_macro": 0.4118,
+            "confusion": {
+              "tp": 0,
+              "tn": 7,
+              "fp": 3,
+              "fn": 0
+            }
+          }
+        },
+        "by_mode": {
+          "scan": {
+            "n": 3,
+            "accuracy": 0.6667,
+            "precision_pos": 1.0,
+            "recall_pos": 0.6667,
+            "f1_pos": 0.8,
+            "f1_macro": 0.4,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 1
+            }
+          },
+          "photo": {
+            "n": 8,
+            "accuracy": 0.375,
+            "precision_pos": 0.1667,
+            "recall_pos": 1.0,
+            "f1_pos": 0.2857,
+            "f1_macro": 0.3651,
+            "confusion": {
+              "tp": 1,
+              "tn": 2,
+              "fp": 5,
+              "fn": 0
+            }
+          },
+          "digital": {
+            "n": 30,
+            "accuracy": 0.6,
+            "precision_pos": 0.7059,
+            "recall_pos": 0.6316,
+            "f1_pos": 0.6667,
+            "f1_macro": 0.5833,
+            "confusion": {
+              "tp": 12,
+              "tn": 6,
+              "fp": 5,
+              "fn": 7
+            }
+          }
+        },
+        "by_specialty": {
+          "dermatologia": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "cardiologia": {
+            "n": 3,
+            "accuracy": 0.0,
+            "precision_pos": 0.0,
+            "recall_pos": 0.0,
+            "f1_pos": 0.0,
+            "f1_macro": 0.0,
+            "confusion": {
+              "tp": 0,
+              "tn": 0,
+              "fp": 0,
+              "fn": 3
+            }
+          },
+          "clinica_geral": {
+            "n": 6,
+            "accuracy": 0.6667,
+            "precision_pos": 0.8,
+            "recall_pos": 0.8,
+            "f1_pos": 0.8,
+            "f1_macro": 0.4,
+            "confusion": {
+              "tp": 4,
+              "tn": 0,
+              "fp": 1,
+              "fn": 1
+            }
+          },
+          "endocrinologia": {
+            "n": 3,
+            "accuracy": 0.6667,
+            "precision_pos": 1.0,
+            "recall_pos": 0.6667,
+            "f1_pos": 0.8,
+            "f1_macro": 0.4,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 1
+            }
+          },
+          "enfermagem": {
+            "n": 1,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 1,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "neurologia": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "ortopedia": {
+            "n": 2,
+            "accuracy": 0.0,
+            "precision_pos": 0.0,
+            "recall_pos": 0.0,
+            "f1_pos": 0.0,
+            "f1_macro": 0.0,
+            "confusion": {
+              "tp": 0,
+              "tn": 0,
+              "fp": 0,
+              "fn": 2
+            }
+          },
+          "medicina_trabalho": {
+            "n": 2,
+            "accuracy": 0.5,
+            "precision_pos": 1.0,
+            "recall_pos": 0.5,
+            "f1_pos": 0.6667,
+            "f1_macro": 0.3333,
+            "confusion": {
+              "tp": 1,
+              "tn": 0,
+              "fp": 0,
+              "fn": 1
+            }
+          },
+          "pediatria": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "radiologia": {
+            "n": 2,
+            "accuracy": 0.5,
+            "precision_pos": 0.5,
+            "recall_pos": 1.0,
+            "f1_pos": 0.6667,
+            "f1_macro": 0.3333,
+            "confusion": {
+              "tp": 1,
+              "tn": 0,
+              "fp": 1,
+              "fn": 0
+            }
+          }
+        }
+      },
+      "adaptive": {
+        "global": {
+          "n": 41,
+          "accuracy": 0.6341,
+          "precision_pos": 0.6429,
+          "recall_pos": 0.7826,
+          "f1_pos": 0.7059,
+          "f1_macro": 0.611,
+          "confusion": {
+            "tp": 18,
+            "tn": 8,
+            "fp": 10,
+            "fn": 5
+          }
+        },
+        "by_label": {
+          "clinical": {
+            "n": 19,
+            "accuracy": 0.7368,
+            "precision_pos": 1.0,
+            "recall_pos": 0.7368,
+            "f1_pos": 0.8485,
+            "f1_macro": 0.4242,
+            "confusion": {
+              "tp": 14,
+              "tn": 0,
+              "fp": 0,
+              "fn": 5
+            }
+          },
+          "ambiguous": {
+            "n": 12,
+            "accuracy": 0.4167,
+            "precision_pos": 0.3636,
+            "recall_pos": 1.0,
+            "f1_pos": 0.5333,
+            "f1_macro": 0.3778,
+            "confusion": {
+              "tp": 4,
+              "tn": 1,
+              "fp": 7,
+              "fn": 0
+            }
+          },
+          "non-clinical": {
+            "n": 10,
+            "accuracy": 0.7,
+            "precision_pos": 0.0,
+            "recall_pos": 0.0,
+            "f1_pos": 0.0,
+            "f1_macro": 0.4118,
+            "confusion": {
+              "tp": 0,
+              "tn": 7,
+              "fp": 3,
+              "fn": 0
+            }
+          }
+        },
+        "by_mode": {
+          "scan": {
+            "n": 3,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 3,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "photo": {
+            "n": 8,
+            "accuracy": 0.375,
+            "precision_pos": 0.1667,
+            "recall_pos": 1.0,
+            "f1_pos": 0.2857,
+            "f1_macro": 0.3651,
+            "confusion": {
+              "tp": 1,
+              "tn": 2,
+              "fp": 5,
+              "fn": 0
+            }
+          },
+          "digital": {
+            "n": 30,
+            "accuracy": 0.6667,
+            "precision_pos": 0.7368,
+            "recall_pos": 0.7368,
+            "f1_pos": 0.7368,
+            "f1_macro": 0.6411,
+            "confusion": {
+              "tp": 14,
+              "tn": 6,
+              "fp": 5,
+              "fn": 5
+            }
+          }
+        },
+        "by_specialty": {
+          "dermatologia": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "cardiologia": {
+            "n": 3,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 3,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "clinica_geral": {
+            "n": 6,
+            "accuracy": 0.6667,
+            "precision_pos": 0.8,
+            "recall_pos": 0.8,
+            "f1_pos": 0.8,
+            "f1_macro": 0.4,
+            "confusion": {
+              "tp": 4,
+              "tn": 0,
+              "fp": 1,
+              "fn": 1
+            }
+          },
+          "endocrinologia": {
+            "n": 3,
+            "accuracy": 0.6667,
+            "precision_pos": 1.0,
+            "recall_pos": 0.6667,
+            "f1_pos": 0.8,
+            "f1_macro": 0.4,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 1
+            }
+          },
+          "enfermagem": {
+            "n": 1,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 1,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "neurologia": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "ortopedia": {
+            "n": 2,
+            "accuracy": 0.0,
+            "precision_pos": 0.0,
+            "recall_pos": 0.0,
+            "f1_pos": 0.0,
+            "f1_macro": 0.0,
+            "confusion": {
+              "tp": 0,
+              "tn": 0,
+              "fp": 0,
+              "fn": 2
+            }
+          },
+          "medicina_trabalho": {
+            "n": 2,
+            "accuracy": 0.5,
+            "precision_pos": 1.0,
+            "recall_pos": 0.5,
+            "f1_pos": 0.6667,
+            "f1_macro": 0.3333,
+            "confusion": {
+              "tp": 1,
+              "tn": 0,
+              "fp": 0,
+              "fn": 1
+            }
+          },
+          "pediatria": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "radiologia": {
+            "n": 2,
+            "accuracy": 0.5,
+            "precision_pos": 0.5,
+            "recall_pos": 1.0,
+            "f1_pos": 0.6667,
+            "f1_macro": 0.3333,
+            "confusion": {
+              "tp": 1,
+              "tn": 0,
+              "fp": 1,
+              "fn": 0
+            }
+          }
+        }
+      }
+    },
+    "C": {
+      "uniform": {
+        "global": {
+          "n": 41,
+          "accuracy": 0.7805,
+          "precision_pos": 0.7333,
+          "recall_pos": 0.9565,
+          "f1_pos": 0.8302,
+          "f1_macro": 0.7599,
+          "confusion": {
+            "tp": 22,
+            "tn": 10,
+            "fp": 8,
+            "fn": 1
+          }
+        },
+        "by_label": {
+          "clinical": {
+            "n": 19,
+            "accuracy": 0.9474,
+            "precision_pos": 1.0,
+            "recall_pos": 0.9474,
+            "f1_pos": 0.973,
+            "f1_macro": 0.4865,
+            "confusion": {
+              "tp": 18,
+              "tn": 0,
+              "fp": 0,
+              "fn": 1
+            }
+          },
+          "ambiguous": {
+            "n": 12,
+            "accuracy": 0.3333,
+            "precision_pos": 0.3333,
+            "recall_pos": 1.0,
+            "f1_pos": 0.5,
+            "f1_macro": 0.25,
+            "confusion": {
+              "tp": 4,
+              "tn": 0,
+              "fp": 8,
+              "fn": 0
+            }
+          },
+          "non-clinical": {
+            "n": 10,
+            "accuracy": 1.0,
+            "precision_pos": 0.0,
+            "recall_pos": 0.0,
+            "f1_pos": 0.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 0,
+              "tn": 10,
+              "fp": 0,
+              "fn": 0
+            }
+          }
+        },
+        "by_mode": {
+          "scan": {
+            "n": 3,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 3,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "photo": {
+            "n": 8,
+            "accuracy": 0.625,
+            "precision_pos": 0.25,
+            "recall_pos": 1.0,
+            "f1_pos": 0.4,
+            "f1_macro": 0.5636,
+            "confusion": {
+              "tp": 1,
+              "tn": 4,
+              "fp": 3,
+              "fn": 0
+            }
+          },
+          "digital": {
+            "n": 30,
+            "accuracy": 0.8,
+            "precision_pos": 0.7826,
+            "recall_pos": 0.9474,
+            "f1_pos": 0.8571,
+            "f1_macro": 0.7619,
+            "confusion": {
+              "tp": 18,
+              "tn": 6,
+              "fp": 5,
+              "fn": 1
+            }
+          }
+        },
+        "by_specialty": {
+          "dermatologia": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "cardiologia": {
+            "n": 3,
+            "accuracy": 0.6667,
+            "precision_pos": 1.0,
+            "recall_pos": 0.6667,
+            "f1_pos": 0.8,
+            "f1_macro": 0.4,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 1
+            }
+          },
+          "clinica_geral": {
+            "n": 6,
+            "accuracy": 0.8333,
+            "precision_pos": 0.8333,
+            "recall_pos": 1.0,
+            "f1_pos": 0.9091,
+            "f1_macro": 0.4545,
+            "confusion": {
+              "tp": 5,
+              "tn": 0,
+              "fp": 1,
+              "fn": 0
+            }
+          },
+          "endocrinologia": {
+            "n": 3,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 3,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "enfermagem": {
+            "n": 1,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 1,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "neurologia": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "ortopedia": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "medicina_trabalho": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "pediatria": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "radiologia": {
+            "n": 2,
+            "accuracy": 0.5,
+            "precision_pos": 0.5,
+            "recall_pos": 1.0,
+            "f1_pos": 0.6667,
+            "f1_macro": 0.3333,
+            "confusion": {
+              "tp": 1,
+              "tn": 0,
+              "fp": 1,
+              "fn": 0
+            }
+          }
+        }
+      },
+      "adaptive": {
+        "global": {
+          "n": 41,
+          "accuracy": 0.8049,
+          "precision_pos": 0.7419,
+          "recall_pos": 1.0,
+          "f1_pos": 0.8519,
+          "f1_macro": 0.7831,
+          "confusion": {
+            "tp": 23,
+            "tn": 10,
+            "fp": 8,
+            "fn": 0
+          }
+        },
+        "by_label": {
+          "clinical": {
+            "n": 19,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 19,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "ambiguous": {
+            "n": 12,
+            "accuracy": 0.3333,
+            "precision_pos": 0.3333,
+            "recall_pos": 1.0,
+            "f1_pos": 0.5,
+            "f1_macro": 0.25,
+            "confusion": {
+              "tp": 4,
+              "tn": 0,
+              "fp": 8,
+              "fn": 0
+            }
+          },
+          "non-clinical": {
+            "n": 10,
+            "accuracy": 1.0,
+            "precision_pos": 0.0,
+            "recall_pos": 0.0,
+            "f1_pos": 0.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 0,
+              "tn": 10,
+              "fp": 0,
+              "fn": 0
+            }
+          }
+        },
+        "by_mode": {
+          "scan": {
+            "n": 3,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 3,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "photo": {
+            "n": 8,
+            "accuracy": 0.625,
+            "precision_pos": 0.25,
+            "recall_pos": 1.0,
+            "f1_pos": 0.4,
+            "f1_macro": 0.5636,
+            "confusion": {
+              "tp": 1,
+              "tn": 4,
+              "fp": 3,
+              "fn": 0
+            }
+          },
+          "digital": {
+            "n": 30,
+            "accuracy": 0.8333,
+            "precision_pos": 0.7917,
+            "recall_pos": 1.0,
+            "f1_pos": 0.8837,
+            "f1_macro": 0.7948,
+            "confusion": {
+              "tp": 19,
+              "tn": 6,
+              "fp": 5,
+              "fn": 0
+            }
+          }
+        },
+        "by_specialty": {
+          "dermatologia": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "cardiologia": {
+            "n": 3,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 3,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "clinica_geral": {
+            "n": 6,
+            "accuracy": 0.8333,
+            "precision_pos": 0.8333,
+            "recall_pos": 1.0,
+            "f1_pos": 0.9091,
+            "f1_macro": 0.4545,
+            "confusion": {
+              "tp": 5,
+              "tn": 0,
+              "fp": 1,
+              "fn": 0
+            }
+          },
+          "endocrinologia": {
+            "n": 3,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 3,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "enfermagem": {
+            "n": 1,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 1,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "neurologia": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "ortopedia": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "medicina_trabalho": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "pediatria": {
+            "n": 2,
+            "accuracy": 1.0,
+            "precision_pos": 1.0,
+            "recall_pos": 1.0,
+            "f1_pos": 1.0,
+            "f1_macro": 0.5,
+            "confusion": {
+              "tp": 2,
+              "tn": 0,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "radiologia": {
+            "n": 2,
+            "accuracy": 0.5,
+            "precision_pos": 0.5,
+            "recall_pos": 1.0,
+            "f1_pos": 0.6667,
+            "f1_macro": 0.3333,
+            "confusion": {
+              "tp": 1,
+              "tn": 0,
+              "fp": 1,
+              "fn": 0
+            }
+          }
+        }
+      }
+    }
+  }
+}
