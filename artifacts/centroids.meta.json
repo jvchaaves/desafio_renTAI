@@ -1,0 +1,10 @@
+{
+  "version": "1",
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+  "dim": 768,
+  "n_positive": 19,
+  "n_negative": 7,
+  "n_skipped_no_cache": 3,
+  "labels_csv_sha256": "d817a7d8d33120613317ba789505afafe31a402c510937f9572b995ece0b4b05",
+  "built_at_utc": "2026-05-20T21:07:39.925396+00:00"
+}
